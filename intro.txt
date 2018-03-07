@@ -1,0 +1,32 @@
+﻿the college basketball season lasts from early November until the national championship tournament that starts in the middle of March. when we identify a particular season, we will reference the year that the season ends in, not the year that it starts in.
+
+SEC1 The Basics(关于比赛层面的)
+Teams
+TeamID每个队ID firstD1,LASTD1,从最早season到最后
+
+Seasons
+Dayzero every season which date starts
+Region W和X打，Y和Z打
+
+NCAATourneySeeds okay
+
+ RegularSeasonCompactResults
+和season关联，DayNum【0,132】，WTeamID（ winning team）和team关，WScore（胜者得分）同理WTeamID，LScore. WLoc (胜者队伍H:home,A:visiting，N：neutral court（Data Section 3？）NumOT :加时赛
+
+NCAATourneyCompactResults
+结构和RegularSeasonCompactResults一样，但是包含play-in games（134,135）detail: https://www.kaggle.com/c/mens-machine-learning-competition-2018/data
+
+SampleSubmissionStage1
+14-17年，每年68*67/2=2,278条，4年9,112
+ID:SSSS_XXXX_YYYY,SSSS是那个季度，XX是 lower-ID  team，YY是higher-ID team
+Pred是lower id team的胜率
+
+
+
+
+
+SEC2 （关于球队层面的）
+
+
+
+
