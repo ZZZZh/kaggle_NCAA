@@ -27,19 +27,19 @@ Pred是lower id team的胜率
 
 SEC2 （关于球队层面的）
 RegularSeasonDetailedResults & NCAATourneyDetailedResults.
-WFGM - 非罚球得分 made (by the winning team)
-WFGA - 非罚球得分 attempted (by the winning team)
-WFGM3 - three pointers made (by the winning team)
-WFGA3 - three pointers attempted (by the winning team)
-WFTM - free throws made (by the winning team)
-WFTA - free throws attempted (by the winning team)
-WOR - offensive rebounds 前场进攻篮板(pulled by the winning team)
-WDR - defensive rebounds 后场防守篮板 (pulled by the winning team)
-WAst - assists (by the winning team)
-WTO - turnovers committed 失误犯规 (by the winning team)
-WStl - steals (accomplished by the winning team)
-WBlk - blocks (accomplished by the winning team)
-WPF - personal fouls committed (by the winning team)
+WFGM - 非罚球得分 made (by the winning team) made23
+WFGA - 非罚球得分 attempted (by the winning team) miss23+made23
+WFGM3 - three pointers made (by the winning team) made3
+WFGA3 - three pointers attempted (by the winning team) miss3+made3
+WFTM - free throws made (by the winning team) made1
+WFTA - free throws attempted (by the winning team) miss1+made1
+WOR - offensive rebounds 前场进攻篮板(pulled by the winning team) reb_off, 
+WDR - defensive rebounds 后场防守篮板 (pulled by the winning team) reb_def
+WAst - assists (by the winning team) assist 
+WTO - turnovers committed 失误犯规 (by the winning team) turnover 
+WStl - steals (accomplished by the winning team) steal 
+WBlk - blocks (accomplished by the winning team) block
+WPF - personal fouls committed (by the winning team)foul_pers, 
 
 
 SEC3 (地理)
@@ -51,4 +51,38 @@ CRType - this can be either Regular or NCAA® or Secondary. If it is Regular, yo
 
 SEC4 (排名)
  MasseyOrdinal
-SystemName每个评分系统
+SystemName每个评分系统  weekly basis
+
+
+SEC5 （每场比赛层面）
+Events_201X
+ElapsedSeconds （0-1200上半场发生的事情，1200-2400下半场发生的事情）
+Event Types:
+
+assist - an assist was credited on a made shot
+block - a blocked shot（盖帽） was recorded
+steal - a steal was recorded
+turnover - a turnover（失误） was recorded
+timeout, timeout_tv - a regular timeout(暂停) or TV timeout was called
+foul_pers, foul_tech - a personal foul or technical foul was committed
+reb_off, reb_def, reb_dead - an offensive rebound, defensive rebound, or dead-ball rebound(死球篮板) was recorded
+sub_in, sub_out - a player entered or exited the game via a substitution（换人）
+made1_free, miss1_free - a one-point free throw was made or missed
+made2_dunk, miss2_dunk - a two-point field goal (dunk) was made or missed 扣篮
+made2_tip, miss2_tip - a two-point field goal (tip-in) was made or missed 补篮
+made2_lay, miss2_lay - a two-point field goal (layup) was made or missed 上篮
+made2_jump, miss2_jump - a two-point field goal (jump shot) was made or missed
+made3_jump, miss3_jump - a three-point field goal (assumed to be a jump shot) was made or missed
+
+
+SEC6 (支援)
+TeamCoaches
+
+Conferences 和 TeamConferences关联
+ConferenceTourneyGames
+SecondaryTourneyTeams
+TeamSpellings ID对应名称
+NCAATourneySlots 种子排名
+
+NCAATourneySeedRoundSlots
+ GameRound - this is the round during the tournament that the game would occur in, where Round 0 (zero) is for the play-in games, Rounds 1/2 are for the first weekend, Rounds 3/4 are for the second weekend, and Rounds 5/6 are the national semifinals and finals.
